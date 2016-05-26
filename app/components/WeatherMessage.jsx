@@ -1,8 +1,11 @@
 var React = require('react');
 
-var WeatherMessage = ({temp, location}) => {
+var WeatherMessage = ({weather, location}) => {
   return (
-    <h3>It's it {(temp).toFixed(0)} degrees F in {location}.</h3>
+  	<div>
+    <h3 className="result-string text-center">It's it {(weather.temp).toFixed(0)} degrees F in {location}.</h3>
+    <h3 className="result-string text-center">Relative humidity is {(weather.humidity).toFixed(0)}%.</h3>
+    </div>
   )
 };
 
